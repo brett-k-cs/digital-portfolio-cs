@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Brett Kaplan's Digital Portfolio</title>
+    <meta name="description" content="Digital Portfolio">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="mainNav">
+      <a href="aboutme.html">About Me</a>
+    </nav>
+    <h1>Welcome to my Website!</h1>
+  </body>
+  </html>
