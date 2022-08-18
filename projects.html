@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Brett Kaplan's Digital Portfolio - Projects</title>
+    <meta name="description" content="Digital Portfolio - Projects">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="mainNav">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="whyportfolio.html">Why Portfolio</a>
+    </nav>
+    <main>
+      <h1 style="text-align: left;">Some Previous Projects:</h1>
+      <div class="projectContainer">
+	<h2>Computer Science I ISP</h2>
+	<h3>Worked With: Travis B</h3>
+	<h3>Goal: Create a fun game using the IGIS system using the Swift coding language.</h3>
+	<!-- <img src="images/isp.png" /> -->
+	<h3>Concept:</h3>
+	<p>
+	  We wanted to base a graphic game on a popular game we played when we were kids called Super Mario Bros. We wanted to include the Mario character, Coins, Question Block Tiles, multiple levels, and we added lives and enemies.
+	</p>
+	<h3>Motivation:</h3>
+	<p>
+	  We chose this game because we wanted a challenge. We wanted something that would test our skills.
+	</p>
+	<h3>Code Segments:</h3>
+	<p>
+	  The code below is how I detected if the mario character touched a question block. It uses mario's position (topLeft) & mario's sie (marioSize). It loops through the blocks to check if the character is colliding with them.
+	  <code style="display: block; white-space: pre-wrap; background-color: rgba(0, 0, 0, 0.2); margin-top: 10px;">
+         for box in questionTiles {
+            // topLeft references Mario
+            //box.rect.topLeft references the box
+            //if we assume hiting from the bottom, the y-cords gotta be equal
+            if (topLeft.y <= box.rect.topLeft.y + box.rect.size.height) {
+                // ok now for the x-cords...
+                
+                //the only times when the x-coord doesn't work is if mario's top right is left of the box's top left
+                // or when mario's top left is right of the box's top right
+                if(!(topLeft.x + marioSize.width < box.rect.topLeft.x || topLeft.x > box.rect.topLeft.x + box.rect.size.width )) {
+                    // Need to test if topLeft.y - velocityY is still less than (didnt hit from bottom)
+                    if(topLeft.y - Int(velocityY) < box.rect.topLeft.y + box.rect.size.height) {
+                        // need to see which side it came from so can stop velocityX and reset its position
+                        if(topLeft.x > box.rect.topLeft.x + box.rect.size.width / 2) {
+                            topLeft.x = box.rect.topLeft.x + box.rect.size.width
+                        } else if(topLeft.x + marioSize.width > box.rect.topLeft.x) {
+                            topLeft.x = box.rect.topLeft.x - marioSize.width
+                        }
+                        continue;
+                    }
+                    
+                    // print("TOUCHED BLOCK") '
+                    box.setActivated(value: true)
+                    velocityY = 7.5
+                    topLeft.y = box.rect.topLeft.y + box.rect.size.height
+                }
+            }
+        }
+	  </code>
+	</p>
+	<h3>Conclusion:</h3>
+	<p>
+	  The project went well. By the end, it had 10 levels, multiple enemies, multiple obstacles, and ways to lose lives / lose the game. If I did it again, I would have structured the program better at the start. It was a little messy by the end, and I had to reorganize some things. I liked how we paced ourselves for the project and the complexity of it though.
+	</p>
+	<h3>Code: <a href="https://github.com/brett-k-cs/SuperMario-Bros-Game">https://github.com/brett-k-cs/SuperMario-Bros-Game</a></h3>
+      </div>
+    </main>
+  </body>
+  </html>
