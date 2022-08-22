@@ -32,7 +32,7 @@ h1 {
 }
 
 nav.mainNav {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
     
     width: 100%;
     height: 50px;
@@ -93,4 +93,30 @@ main h1 {
     border: 2px solid white;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 5px 10px;
+}
+
+div.references {
+    position: absolute;
+    width: 80vw;
+    left: 10%;
+    transition: translateX(-50%);
+    bottom: 1vh;
+}
+
+div.ref {
+    margin-top: 60px;
+}
+
+div.ref p {
+    font-size: 16px !important;
+}
+
+main.fingerprintsContainer * {
+    text-align: left;
+    width: 100%;
+}
+
+main.fingerprintsContainer p {
+    font-size: 20px;
+    text-indent: 40px;
 }
