@@ -111,7 +111,7 @@ div.ref p {
     font-size: 16px !important;
 }
 
-main.fingerprintsContainer * {
+main.fingerprintsContainer h1,h3,p {
     text-align: left;
     width: 100%;
 }
@@ -119,4 +119,6 @@ main.fingerprintsContainer * {
 main.fingerprintsContainer p {
     font-size: 20px;
     text-indent: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
