@@ -71,54 +71,20 @@
       <div class="projectContainer">
 	<h2>FRC Scouting App</h2>
 	<h3>Goal: Create an android application that is able to be used to easier gather and report scouting data to our robotics team.</h3>
-	<div style="width: 100%; text-align:center;"><img src="images/isp.png" style="width: 100%; max-width: 1000px;" alt="Image of my ISP project." /></div>
+	<div style="width: 100%; text-align:center;"><img src="images/scoutingapp.png" style="max-width: 1000px; max-height: 700px;" alt="Image of my Scouting App." /></div>
 	<h3>Concept:</h3>
 	<p>
-	  We wanted to base a graphic game on a popular game we played when we were kids called Super Mario Bros. We wanted to include the Mario character, Coins, Question Block Tiles, multiple levels, and we added lives and enemies.
+	  Wanted to make collecting information on teams easier in order to be able to do more strategy. Our previous system was using paper and pencil. While this did work, it took a lot of effort that gave little information. The app can easily be updated and gives all of the information in an electronic format.
 	</p>
 	<h3>Motivation:</h3>
 	<p>
-	  We chose this game because we wanted a challenge. We wanted something that would test our skills.
-	</p>
-	<h3>Code Segments:</h3>
-	<p>
-	  The code below is how I detected if the mario character touched a question block. It uses mario's position (topLeft) & mario's sie (marioSize). It loops through the blocks to check if the character is colliding with them.
-	  <code style="display: block; white-space: pre-wrap; background-color: rgba(0, 0, 0, 0.2); margin-top: 10px;">
-         for box in questionTiles {
-            // topLeft references Mario
-            //box.rect.topLeft references the box
-            //if we assume hiting from the bottom, the y-cords gotta be equal
-            if (topLeft.y <= box.rect.topLeft.y + box.rect.size.height) {
-                // ok now for the x-cords...
-                
-                //the only times when the x-coord doesn't work is if mario's top right is left of the box's top left
-                // or when mario's top left is right of the box's top right
-                if(!(topLeft.x + marioSize.width < box.rect.topLeft.x || topLeft.x > box.rect.topLeft.x + box.rect.size.width )) {
-                    // Need to test if topLeft.y - velocityY is still less than (didnt hit from bottom)
-                    if(topLeft.y - Int(velocityY) < box.rect.topLeft.y + box.rect.size.height) {
-                        // need to see which side it came from so can stop velocityX and reset its position
-                        if(topLeft.x > box.rect.topLeft.x + box.rect.size.width / 2) {
-                            topLeft.x = box.rect.topLeft.x + box.rect.size.width
-                        } else if(topLeft.x + marioSize.width > box.rect.topLeft.x) {
-                            topLeft.x = box.rect.topLeft.x - marioSize.width
-                        }
-                        continue;
-                    }
-                    
-                    // print("TOUCHED BLOCK") '
-                    box.setActivated(value: true)
-                    velocityY = 7.5
-                    topLeft.y = box.rect.topLeft.y + box.rect.size.height
-                }
-            }
-        }
-	  </code>
+	  I wanted to speed up our strategy process. It helps a lot to be able to search match by match, by team, by highest average points, etc.
 	</p>
 	<h3>Conclusion:</h3>
 	<p>
-	  The project went well. By the end, it had 10 levels, multiple enemies, multiple obstacles, and ways to lose lives / lose the game. If I did it again, I would have structured the program better at the start. It was a little messy by the end, and I had to reorganize some things. I liked how we paced ourselves for the project and the complexity of it though.
+	  The original project was in React Native. While this did work, it was messy and I did not like the compiling process. I have now switched to Kotlin, which is specifically for Android devices. This works for us because we have a bunch of old First Tech Challenge (FTC) phones we can scout on.
 	</p>
-	<h3>Code: <a href="https://github.com/brett-k-cs/SuperMario-Bros-Game">https://github.com/brett-k-cs/SuperMario-Bros-Game</a></h3>
+	<!-- <h3>Code: <a href="https://github.com/frc5417/FRCScoutingApp">https://github.com/frc5417/FRCScoutingApp</a></h3> -->
       </div>
 
     </main>
