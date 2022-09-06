@@ -1,7 +1,7 @@
 for(var i = 0; i < document.getElementsByTagName("a").length; i++) {
     const element = document.getElementsByTagName("a")[i]
-    if(element.href.endsWith(".php")) {
-	if(window.location.href.contains("github")) {
+    if(element.href.toString().endsWith(".php")) {
+	if(window.location.href.includes("github")) {
 	    var actualPath =  window.location.path.split("/").slice(0, 1).join("/")
 	    while (element.href.startsWith("../")) {
 		var actualPathArray = actualPath.split("/")
