@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Brett Kaplan's Digital Portfolio - No PHP</title>
+    <meta name="description" content="Digital Portfolio">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1>You are trying to visit a PHP File!</h1>
+      <h2>Github doesn't allow PHP files to be executed, so the button below will take you to the codermerlin version of the website.</h2>
+      <button><a href="" id="hrefID">Click Me!</a></button>
+    </main>
+    <script>
+      function findGetParameter(parameterName) {
+	  var result = null,
+	      tmp = [];
+	  location.search
+	      .substr(1)
+	      .split("&")
+	      .forEach(function (item) {
+		  tmp = item.split("=");
+		  if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+	      });
+	  return result;
+      }
+      
+      document.getElementById('hrefID').href = 'https://codermerlin.com/users/brett-kaplan' + findGetParameter("path")
+    </script>
+  </body>
+  </html>

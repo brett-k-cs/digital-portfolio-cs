@@ -9,6 +9,8 @@ for(var i = 0; i < document.getElementsByTagName("a").length; i++) {
 		element.href = element.split("../").slice(0, 1).join("../")
 	    }
 	    actualPath += element.href;
+	    actualPath = actualPath.replace('https://brett-k-cs.github.io/digital-portfolio-cs/', '');
+	    actualPath = actualPath.replace('http://brett-k-cs.github.io/digital-portfolio-cs/', '');
 	    element.href = "/digital-portfolio/nophp.html?path=" + actualPath
 	}
     }
