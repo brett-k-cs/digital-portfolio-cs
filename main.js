@@ -3,7 +3,7 @@ document.getElementsByTagName("a").forEach(element => {
     if(element.href.endsWith(".php") {
 	if(window.location.href.contains("github") {
 	    var actualPath =  window.location.path.split("/").slice(0, 1).join("/")
-	    while (element.href.startsWith("../") {
+	    while (element.href.startsWith("../")) {
 		var actualPathArray = actualPath.split("/")
 		actualPath = actualPathArray.slice(actualPathArray.length - 2, actualPathArray.length - 1).join("/")
 		element.href = element.split("../").slice(0, 1).join("../")
