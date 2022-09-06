@@ -2,7 +2,7 @@ for(var i = 0; i < document.getElementsByTagName("a").length; i++) {
     const element = document.getElementsByTagName("a")[i]
     if(element.href.toString().endsWith(".php")) {
 	if(window.location.href.includes("github")) {
-	    var actualPath =  window.location.path.split("/").slice(0, 1).join("/")
+	    var actualPath =  window.location.pathname.split("/").slice(0, 1).join("/")
 	    while (element.href.startsWith("../")) {
 		var actualPathArray = actualPath.split("/")
 		actualPath = actualPathArray.slice(actualPathArray.length - 2, actualPathArray.length - 1).join("/")
