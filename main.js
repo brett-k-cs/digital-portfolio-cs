@@ -11,7 +11,7 @@ for(var i = 0; i < document.getElementsByTagName("a").length; i++) {
 	    actualPath += element.href;
 	    actualPath = actualPath.replace('https://brett-k-cs.github.io/digital-portfolio-cs/', '');
 	    actualPath = actualPath.replace('http://brett-k-cs.github.io/digital-portfolio-cs/', '');
-	    element.href = "/digital-portfolio/nophp.html?path=" + actualPath
+	    element.href = "/digital-portfolio-cs/nophp.html?path=" + actualPath
 	}
     }
 };
