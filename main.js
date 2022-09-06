@@ -12,7 +12,7 @@ for(var i = 0; i < document.getElementsByTagName("a").length; i++) {
 	    element.href = "/digital-portfolio/nophp.html?path=" + actualPath
 	}
     }
-});
+};
        
 function toggleDropdown(id) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
