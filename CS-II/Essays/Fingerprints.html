@@ -4,17 +4,23 @@
     <title>Brett Kaplan's Digital Portfolio - Fingerprints</title>
     <meta name="description" content="Digital Portfolio">
     <meta charset="UTF-8">
-    <link href="styles.css" rel="stylesheet" />
+    <link href="../../styles.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="mainNav">
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About Me</a>
-      <a href="projects.html">Projects</a>
-      <a href="whyportfolio.html">Why Portfolio</a>
+      <a href="index.php">Comp Sci II Essays</a>
+      <a href="../../index.html">Home</a>
+      <a href="../../aboutme.html">About Me</a>
+      <a href="../../projects.html">Projects</a>
     </nav>
-    <main class="fingerprintsContainer">
-      <h1>Fingerprints</h1>
+    <main class="essayContainer">
+      <p class="bold center noindent">Fingerprints</p>
+      <br/>
+      <p class="center noindent">Brett Kaplan</p>
+      <p class="center noindent">Allen High School</p>
+      <p class="center noindent">Advanced Computer Science II</p>
+      <p class="center noindent">Mr. Ben-Yaakov</p>
+      <p class="center noindent" style="margin-bottom: 100px;">August 25, 2022</p>
       <p>
 	Fingerprints are used by the HTTPS protocol to ensure the security of a website. The HTTPS protocol is designed to encrypt all data being transmitted between the browser and server, and to protect the website from being able to be hijacked.
 	Because of how restrictive the HTTPS protocol is for ISPs, a HTTPS Proxy Appliance is sometimes used. This Appliance circumvents the guarantee of internet privacy and security. It adds a Pseudo Certificate Authority to the users' browsers / computers. Anytime a user connects to a website with that certificate, the connection is intercepted by the Proxy Appliance and tracked before it leaves the building. This is used by ISPs, governments, and schools to track their users' data.
@@ -32,8 +38,9 @@
 	The security certificates are signed by a Certificate Authority. It is how websites verify their identity in the real world. The CA is expected to have done extensive testing to make sure the website is who they say they are. This is another part of the certificate that is turned into the hash.
       </p>
       <h3>A detailed flowchart describing an algorithm to compare authentic fingerprints with another retrieved from a browser:</h3>
-      <img src="images/fingerprints.png" style="text-align: center; padding: 10px; background-color: rgba(255, 255, 255, 0.25)" alt="The flowchart describing the fingerprint comparing algorithm">
-   <div class="ref">
+      <img src="../../images/fingerprints.png" style="text-align: center; padding: 10px; background-color: rgba(255, 255, 255, 0.25)" alt="The flowchart describing the fingerprint comparing algorithm">
+      <div class="ref">
+	<p style="text-align: center; font-weight: 700;">References</p>
       <p>Gibson, S., & CORPORATION, G. R. (n.d.). Grc | SSL tls HTTPS web server certificate fingerprints. Home of Gibson Research Corporation. https://www.grc.com/fingerprints.htm</p>
       <p>Man-in-the-middle attack (MitM) - Glossary | CSRC. (n.d.). NIST Computer Security Resource Center | CSRC. https://csrc.nist.gov/glossary/term/man_in_the_middle_attack</p>
     </div>

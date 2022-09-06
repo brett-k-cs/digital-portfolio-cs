@@ -1,3 +1,11 @@
+:root {
+    --main-bg-color: #181818;
+    --slightly-darker-bg-color: #1d1d1d;
+    --slightly-lighter-bg-color: #222222;
+    --main-text-color: #FFFFFF;
+    --blue-color: #4287f5;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Trebuchet MS', sans-serif;
@@ -41,6 +49,10 @@ nav.mainNav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+nav.mainNav a {
+    text-decoration: none;
 }
 
 a {
@@ -97,7 +109,7 @@ main h1 {
 
 div.references {
     position: absolute;
-    width: 80vw;
+    width: 100%;
     left: 10%;
     transition: translateX(-50%);
     bottom: 1vh;
@@ -105,20 +117,115 @@ div.references {
 
 div.ref {
     margin-top: 60px;
+    width: 100%;
 }
 
 div.ref p {
-    font-size: 16px !important;
+    font-size: 20px !important;
+    text-align: left;
+    padding-left: 22px;
+    text-indent: -22px;
 }
 
-main.fingerprintsContainer h1,h3,p {
+main.essayContainer * {
+    font-family: "Times New Roman", Times, serif;
+}
+
+main.essayContainer h3,p {
     text-align: left;
     width: 100%;
 }
 
-main.fingerprintsContainer p {
+p.center {
+    text-align: center;
+}
+
+p.bold {
+    font-weight: 700;
+}
+
+main.essayContainer > p {
     font-size: 20px;
     text-indent: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 2;
+}
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: #4287f5;    
+    padding: 8px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    min-width: 15vw;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    color: #4287f5;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--slightly-darker-bg-color);
+    min-width: 15vw;
+    font-size: 1.1rem;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: rotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes rotateMenu {
+    0% {
+	transform: rotateX(-90deg)
+    }
+    70% {
+	transform: rotateX(20deg)
+    }
+    100% {
+	transform: rotateX(0deg)
+    }
+}
+
+
+@keyframes unRotateMenu {
+    0% {
+	transform: rotateX(0deg);
+    }
+    40% {
+	transform: rotateX(20deg);
+    }
+    100% {
+	transform: rotateX(-90deg);
+	display: none;
+    }
+}
+
+.dropdown-content a {
+    color: var(--blue-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: var(--slightly-lighter-bg-color);}
+
+.show {display: block;}
+.hide {
+    animation: unRotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.noindent {
+    text-indent: 0 !important;
 }

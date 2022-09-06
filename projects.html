@@ -10,8 +10,21 @@
     <nav class="mainNav">
       <a href="index.html">Home</a>
       <a href="aboutme.html">About Me</a>
-      <a href="fingerprints.html">Fingerprints</a>
-      <a href="whyportfolio.html">Why Portfolio</a>
+            <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-I')">Advanced CS-I</button>
+	<div id="CS-I" class="dropdown-content">
+	  <a href="CS-I/index.html">Home</a>
+	  <a href="CS-I/Journals/index.php" target="_blank">Journals</a>
+	</div>
+      </div>
+
+      <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-II')">Advanced CS-II</button>
+	<div id="CS-II" class="dropdown-content">
+	  <a href="CS-II/index.html">Home</a>
+	  <a href="CS-II/Essays/index.php">Essays</a>
+	</div>
+      </div>
     </nav>
     <main>
       <h1 style="text-align: left;">Some Previous Projects:</h1>
@@ -88,5 +101,6 @@
       </div>
 
     </main>
+    <script type='text/javascript' src="main.js"></script>
   </body>
   </html>

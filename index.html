@@ -9,14 +9,34 @@
   <body>
     <nav class="mainNav">
       <a href="aboutme.html">About Me</a>
-      <a href="fingerprints.html">Fingerprints</a>
       <a href="projects.html">Projects</a>
-      <a href="whyportfolio.html">Why Portfolio</a>
+      <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-I')">Advanced CS-I</button>
+	<div id="CS-I" class="dropdown-content">
+	  <a href="CS-I/index.html">Home</a>
+	  <a href="CS-I/Journals/index.php" target="_blank">Journals</a>
+	</div>
+      </div>
+
+      <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-II')">Advanced CS-II</button>
+	<div id="CS-II" class="dropdown-content">
+	  <a href="CS-II/index.html">Home</a>
+	  <a href="CS-II/Essays/index.php">Essays</a>
+	</div>
+      </div>
+
     </nav>
     <main>
       <h1>Welcome to my Digital Portfolio!</h1>
 
+      <h2 style="text-align: left; margin-top: 5vh; width: 100%;">Why Do I have a Portfolio?</h2>
+      <p style="font-size: 20px; text-indent: 40px;">
+	The simple answer, it is required. However, it also important to have a digital portfolio because it can act as a resume. Employers often want an example of what you can do and what you have done. Many software engineers & front-end developers have amazing digital portfolios that show off their skills. My favorite is <a href="https://bruno-simon.com/" target="_blank">Bruno Simon's portfolio</a>. He uses ThreeJS to make an amazing and interactive portfolio. It shows off his previous projects and his current projects which builds his credibility. This is why a portfolio is important to me. I want to have a place that I can link to that shows off all of my education, my previous projects, my previous employers, and any other experience.
+      </p>
+
       <h2 style="position: absolute; bottom: 50px">This portfolio lives at <span><a href="https://brett-k-cs.github.io/digital-portfolio-cs/">https://brett-k-cs.github.io/digital-portfolio-cs/</a></span></h2>
     </main>
+    <script type='text/javascript' src="main.js"></script>
   </body>
   </html>
