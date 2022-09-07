@@ -13,7 +13,7 @@
 	<a href="../../projects.html">Projects</a>
       </nav>
       <main>
-	  <h1 style="text-align: left;">Computer Science II - Essays</h1>
+	  <h1 style="text-align: left;">Computer Science II - Projects</h1>
 	  <?php
       	  if ($handle = opendir('.')) {
 	      while (false !== ($entry = readdir($handle))) {

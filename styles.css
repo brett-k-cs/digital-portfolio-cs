@@ -107,6 +107,10 @@ main h1 {
     box-shadow: 5px 10px;
 }
 
+.projectContainer:last-child {
+    margin-bottom: 30px;
+}
+
 div.references {
     position: absolute;
     width: 100%;
