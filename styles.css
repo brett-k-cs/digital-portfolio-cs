@@ -97,6 +97,10 @@ main h1 {
     font-size: 22px;
 }
 
+.col > a {
+    font-size: 22px;
+}
+
 .projectContainer {
     width: 90%;
     margin-top: 30px;
