@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <title>Brett Kaplan's Digital Portfolio - CS II</title>
     <meta name="description" content="Digital Portfolio">
@@ -18,7 +18,8 @@
       	  if ($handle = opendir('.')) {
 	      while (false !== ($entry = readdir($handle))) {
 		 if ($entry != "." && $entry != ".." && strpos($entry, "#") == false && strpos($entry, "~") == false && (strpos($entry, ".txt") != false || strpos($entry, ".html") != false) && (strpos($entry, "index") == false) && (strpos($entry, "Tutorial") == false)) {
-		    list($title, $extension) = explode('.', $entry);
+		     list($title, $extension) = explode('.', $entry);
+		     $entry = str_replace($entry, " ", "%20");
 		    echo "<h2><a href='$entry'>$title</a></h2>";
 		 }
 	     }

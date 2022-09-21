@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link href="styles.css" rel="stylesheet" />
     <style>
-      #hrefID button {
+      #hrefID {
 	  background-color: #1f1f1f;
 	  color: #4287f5;    
 	  padding: 8px;
@@ -18,7 +18,7 @@
 	  transition: background-color 500ms ease-in-out, font-size 500ms ease-in-out, border-radius 500ms ease-in-out;
       }
 
-      #hrefID button:hover {
+      #hrefID:hover {
 	  background-color: #1a1a1a;
 	  font-size: 1.6rem;
 	  border-radius: 15px;
@@ -29,7 +29,7 @@
     <main>
       <h1>You are trying to visit a PHP File!</h1>
       <h2>Github doesn't allow PHP files to be executed, so the button below will take you to the codermerlin version of the website.</h2>
-      <a href="" id="hrefID"><button>Click Me!</button></a>
+      <button id="hrefID">Click Me!</button>
     </main>
     <script>
       function findGetParameter(parameterName) {
@@ -45,7 +45,9 @@
 	  return result;
       }
       
-      document.getElementById('hrefID').href = 'https://codermerlin.com/users/brett-kaplan/Digital Portfolio' + findGetParameter("path")
+      document.getElementById('hrefID').onclick = () => {
+	  location.href = 'https://codermerlin.com/users/brett-kaplan/Digital Portfolio' + findGetParameter("path")
+      };
     </script>
   </body>
   </html>

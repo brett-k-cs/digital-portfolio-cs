@@ -115,7 +115,7 @@ div.references {
     position: absolute;
     width: 100%;
     left: 10%;
-    transition: translateX(-50%);
+    transform: translateX(-50%);
     bottom: 1vh;
 }
 
