@@ -36,6 +36,7 @@
 		      echo "<button class=\"dropbtn\" style=\"font-weight: bold; text-decoration: underline;\" onmouseover=\"toggleDropdown('ISP')\">ISP</button>";
 		      echo "<div id=\"ISP\" class=\"dropdown-content\">";
 		      echo "<a href=\"ISP/index.html\">Home</a>";
+		      echo "<a href=\"ISP/Journal.html\">Journals</a>";
 		      echo "</div>";
 		      echo "</div>";
 		  }
