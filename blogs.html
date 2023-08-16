@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Brett Kaplan's Digital Portfolio - Projects</title>
+    <meta name="description" content="Digital Portfolio - Projects">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      .projectContainer p {
+	  font-size: 22px;
+	  text-indent: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="mainNav">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-I')">CS-I</button>
+	<div id="CS-I" class="dropdown-content">
+	  <a href="CS-I/index.html">Home</a>
+	  <a href="CS-I/Journals/index.php" target="_blank">Journals</a>
+	</div>
+	    </div>
+
+      <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-II')">CS-II</button>
+	<div id="CS-II" class="dropdown-content">
+	  <a href="CS-II/index.html">Home</a>
+	  <a href="CS-II/Essays/index.php">Essays</a>
+	  <a href="CS-II/Projects/index.php">Projects</a>
+	</div>
+      </div>
+
+      <div class="dropdown">
+	<button class="dropbtn" onmouseover="toggleDropdown('CS-III')">CS-III</button>
+	<div id="CS-III" class="dropdown-content">
+	  <a href="CS-III/index.html">Home</a>
+	  <a href="CS-III/Essays/index.php">Essays</a>
+	  <a href="CS-III/Projects/index.php">Projects</a>
+	</div>
+      </div>      
+      
+    </nav>
+    <main>
+      <h1 style="text-align: left;">Blogs:</h1>
+      <div class="projectContainer">
+	<h2>3-May-2023: BYOD Change</h2>
+	<p>
+	  Implementing the end of the BYOD policy will be detrimental to the students. There are some classes I have that require programs that do not work on school issued laptops. For example, for computer science, I need to be able to access codermerlin. There are ways around using the terminal, like Tabby, but they do not provide the same experience that a shell does. The devices the school gives us also aren't powerful. The hardware inside them is inferior to what most people who bring their own devices have. On another note, requiring the use of Empower 1:1 devices would mean the school tracks us students more. We live in a world of technology where our every action can be tracked. There should still be some privacy. I do not want the school to have access to every click I make.
+	</p>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+  </html>
