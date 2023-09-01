@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Brett Kaplan's Digital Portfolio - Advanced Sort Algorithms</title>
+    <meta name="description" content="Digital Portfolio - Advanced Sorting Algorithms">
+    <meta charset="UTF-8">
+    <link href="../../styles.css" rel="stylesheet">
+    <style>
+      table {
+	  width: 100%;
+	  border-collapse: collapse;
+      }
+
+      td, th {
+	  border: 1px solid #2d2d2d;
+	  text-align: center;
+	  padding: 0.5rem;
+      }
+
+      tr:nth-child(odd) {
+	  background-color: #4d4d4d;
+      }
+
+      .projectContainer img {
+	  width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="mainNav">
+      <a href="index.php">Comp Sci III Projects</a>
+      <a href="../../index.html">Home</a>
+      <a href="../../aboutme.html">About Me</a>
+      <a href="../../projects.html">Projects</a>
+    </nav>
+    <main>
+      <div class="projectContainer">
+	<h2>Merge Sort</h2>
+	<h3>Description:</h3>
+	<p>The Merge Sort Algorithm is a general-purpose, comparison-based sorting algorithm. It divides and conquers the elements. It divides the array into equal halves and then combines them in a sorted manner. For example, with an element that has 8 elements, it first splits the array in two, so two arrays with four elements. It splits again until it has 8 arrays with one element each. Then it joins them back together in groups. It combines element 0 and 1, sorting them. Then it combines until it is back into one array, sorting as it combines.</p>
+	<h3>Example (GeeksForGeeks.org)</h3>
+	<img alt="MergeSort Example" src="https://media.geeksforgeeks.org/wp-content/uploads/20230706153706/Merge-Sort-Algorithm-(1).png" />
+      </div>
+      <div class="projectContainer">
+	<h2>QuickSort</h2>
+	<h3>Description:</h3>
+	<p>The QuickSort Algorithm is another comparison-based sorting algorithm. It also divides and conqueors the elements. It chooses an element as a pivot point and partitions the array around the pivot by placing the pivot in its correct position in the array. This means after it founds how many elements are less than it and how many are greater than it. It arranges them so that the ones that are less than it are to the left of the pivot point and the ones that are greater are to the right of it. It then repeats this steps with different pivots to divide up the elements and sort them.</p>
+	<h3>Example (EnjoyAlgorithms.com)</h3>
+	<img alt="QuickSort Example" src="https://cdn-images-1.medium.com/max/1080/1*-Ew3z7-bu0gjNXKL6plLzA.jpeg" />
+      </div>
+      <div class="projectContainer">
+	<h2>HeapSort</h2>
+	<h3>Description:</h3>
+	<p>HeapSort places the elements in a special binary tree called a heap. Binary trees have the option to find the parents and children of any node. The largest (or smallest) element should be the root (original) node. All the children following it should be smaller (or larger) and ordered. The algorithm goes through and if the child is greater than the parent, it swaps them. It starts from the root (top) and recursively continues down.</p>
+	<h3>Example (GeeksForGeeks.org)</h3>
+	<img alt="HeapSort Example" src="https://media.geeksforgeeks.org/wp-content/uploads/20230530092705/2-(1).webp" />
+      </div>
+      <div class="projectContainer">
+	<h2>Comparison</h2>
+	<h3>Time Complexity:</h3>
+	<table>
+	  <tr>
+	    <th></th>
+	    <th>Merge Sort</th>
+	    <th>QuickSort</th>
+	    <th>HeapSort</th>
+	  </tr>
+	  <tr>
+	    <th>Best Case</th>
+	    <td>O(n*Log n)</td>
+	    <td>O(n*Log n)</td>
+	    <td>O(n*Log n)</td>
+	  </tr>
+	  <tr>
+	    <th>Average Case</th>
+	    <td>O(n*Log n)</td>
+	    <td>O(n*Log n)</td>
+	    <td>O(n*Log n)</td>
+	  </tr>
+	  <tr>
+	    <th>Worst Case</th>
+	    <td>O(n*Log n)</td>
+	    <td>O(n<sup>2</sup>)</td>
+	    <td>O(n*Log n)</td>
+	  </tr>
+	</table>
+	<p>The Merge and Heap Sorting Algorithms both only have one time complexity for all cases. This means it will take the same time no matter how the elements are ordered. Quick Sort has a different Worst Case time complexity because it can skip some steps if elements are already sorted.</p>
+	<h3>Space Complexity</h3>
+	<table>
+	  <tr>
+	    <th>Merge Sort</th>
+	    <th>QuickSort</th>
+	    <th>HeapSort</th>
+	  </tr>
+	  <tr>
+	    <td>O(n)</td>
+	    <td>O(Log n)</td>
+	    <td>O(1)</td>
+	  </tr>
+	</table>
+	<p>Merge Sort has the largest space complexity because it creates the most other data structures. It works by creating multiple arrays and splitting them. Quick Sort has the next largest because it creates more arrays, but it partitions them. This means it rearranges them instead of merging them. However, in the very worst case, QuickSort can have a space complexity of O(n), making it act similar to merge sort. This is because it saves the pivot element for every partition, and there will be as many partitians as elements in the worst case scenario. Heap Sort is in-place, so it has a space complexity of O(1). That means the algorithm does not create more elements or arrays. It instead rearranges them in the original declaration.</p>
+      </div>
+    </main>
+    <script src="../../main.js"></script>
+  </body>
+</html>
